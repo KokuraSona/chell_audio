@@ -3,7 +3,7 @@ Guide to working Linux audio on Chromebook hardware `CAROLINE, CHELL, SENTRY`. T
 
 ## Requirements
 
-  - You need the kernel module `snd_soc_skl` available and loaded. You can check with `lsmod snd_soc_skl`. This commonly is already built into your kernel; on Ubuntu, try installing `linux-modules-extra`, otherwise you will need to build it from source using the configuration item `CONFIG_SND_SOC_INTEL_SKYLAKE`
+  - You need the kernel module `snd_soc_skl` available and loaded. You can check with `lsmod | grep snd_soc_skl`. This commonly is already built into your kernel; on Ubuntu, try installing `linux-modules-extra`, otherwise you will need to build it from source using the configuration item `CONFIG_SND_SOC_INTEL_SKYLAKE`
   - Some have reported issues with `intel_iommu` using this firmware, if you don't need it disable it in your bootloader. 
   - Clone this repo: `git clone --recurse-submodules https://github.com/iofq/chell_audio`
   - Optional but recommended: package `acpid` for auto-detecting headphone plug events. 
@@ -25,7 +25,7 @@ sudo cp firmware/intel/* /lib/firmware/intel/
 ```
 Copy the contents of the `ucm2` directory into /usr/share/alsa/ucm2:
 ```bash
-sudo cp -r galliumos-skylake/usr/share/alsa/ucm/* /usr/share/alsa/ucm2
+sudo cp -r ucm2/* /usr/share/alsa/ucm2
 ```
 Copy the contents of the `galliumos-skylake/etc` directory into /etc:
 ```bash
