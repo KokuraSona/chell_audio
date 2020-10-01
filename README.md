@@ -17,19 +17,19 @@ git submodule init && git submodule update
 ```
 Copy the contents of the `galliumos-skylake/lib/firmware` directory into /lib/firmware:
 ```bash
-sudo cp -r galliumos-skylake/lib/firmware/ /lib/firmware/
+sudo cp galliumos-skylake/lib/firmware/* /lib/firmware
 ```
 Copy the contents of the `firmware` directory into /lib/firmware. 
 ```bash
-sudo cp -r firmware/ /lib/firmware/
+sudo cp firmware/intel/* /lib/firmware/intel/
 ```
 Copy the contents of the `ucm2` directory into /usr/share/alsa/ucm2:
 ```bash
-sudo cp -r galliumos-skylake/usr/share/alsa/ucm2/ /usr/share/alsa/ucm2/
+sudo cp -r galliumos-skylake/usr/share/alsa/ucm/* /usr/share/alsa/ucm2
 ```
-Copy the contents of the `galliumos-skylake/etc` directory into /etc/:
+Copy the contents of the `galliumos-skylake/etc` directory into /etc:
 ```bash
-sudo cp -r * galliumos-skylake/etc/ /etc/
+sudo cp -r galliumos-skylake/etc/* /etc
 ```
 At this point, after a reboot you should have working audio! Volume can be set with `amixer set Master 50% unmute` and headphone<->speaker detection should work.
 
