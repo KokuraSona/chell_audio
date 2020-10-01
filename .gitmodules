@@ -1,0 +1,3 @@
+[submodule "galliumos-skylake"]
+	path = galliumos-skylake
+	url = https://github.com/GalliumOS/galliumos-skylake
