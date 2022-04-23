@@ -1,11 +1,11 @@
 # chell_audio
-Guide to working Linux audio on Chromebook hardware `CAROLINE, CHELL, SENTRY`. Tested on Arch Linux 5.8 kernel and Debian Buster.
+Guide to working Linux audio on Chromebook hardware `CAROLINE, CHELL, SENTRY`. __Does not work on kernel version 5.15 and above(e.g. Ubuntu 22.04)__
 
 ## Requirements
 
   - You need the kernel module `snd_soc_skl` available and loaded. You can check with `lsmod | grep snd_soc_skl`. This commonly is already built into your kernel; on Ubuntu, try installing `linux-modules-extra`, otherwise you will need to build it from source using the configuration item `CONFIG_SND_SOC_INTEL_SKYLAKE`
   - Some have reported issues with `intel_iommu` using this firmware, if you don't need it disable it in your bootloader. 
-  - Clone this repo: `git clone --recurse-submodules https://github.com/iofq/chell_audio`
+  - Clone this repo: `git clone --recurse-submodules https://github.com/KokuraSona/chell_audio`
   - Optional but recommended: package `acpid` for auto-detecting headphone plug events. 
     - Installed by default on Ubuntu 12.04+.
     - On Arch, `pacman -S acpid && systemctl enable --now acpid`
