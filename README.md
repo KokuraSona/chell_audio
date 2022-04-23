@@ -1,5 +1,5 @@
 # chell_audio
-Guide to working Linux audio on Chromebook hardware `CAROLINE, CHELL, SENTRY`. __Does not work on kernel version 5.15 and above(e.g. Ubuntu 22.04)__
+Guide to working Linux audio on Chromebook hardware `CAROLINE, CHELL, SENTRY`. __Does not work on kernel version 5.15 and above__
 
 ## Requirements
 
